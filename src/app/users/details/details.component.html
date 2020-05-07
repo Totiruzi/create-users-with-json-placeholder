@@ -1,0 +1,17 @@
+<mat-accordion displayMode="default" [multi]="true"
+               [hideToggle]="false"
+               *ngIf="users.length > 0">
+    <mat-expansion-panel [hideToggle]="false" *ngFor="let user of users">
+        <mat-expansion-panel-header >{{user.firstName}}</mat-expansion-panel-header>
+          <ul>
+            <li><span class="title">Last Name:</span>{{ user.LastName}}</li>
+            <li><span class="title">Email:</span>{{user.email}}</li>
+            <li><span class="title">Telephone:</span>{{user.telephone}}</li>
+          </ul>
+        <mat-action-row>
+            <button mat-button >Action1</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion>
+<p
+<!-- <p class="mat-body-1" *ngIf="users.length <= 0">No Contact added yet</p> -->

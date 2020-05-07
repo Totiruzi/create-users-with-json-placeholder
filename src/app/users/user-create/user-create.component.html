@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-form-field>
+    <input matInput row="6" type="text" name="First Name" [(ngModel)="fnValue"] required />
+    <input matInput row="6" type="text" name="Last Name" [(ngModel)="lnValue"] required />
+    <input matInput row="6" type="email" name="email" [(ngModel)="emValue"] required />
+    <input matInput row="6" type="tel" name="Phone Number" [(ngModel)="phValue"] required />
+  </mat-form-field>
+  <button mat-raised-button color="accent" (click)="onAddContact()">Save Contact</button>
+</mat-card>
