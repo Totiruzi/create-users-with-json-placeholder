@@ -1,12 +1,12 @@
 <mat-card>
-  <form #contactForm="ngForm" (submit)="onSaveContact(contactForm)">
+  <form #contactForm="ngForm" (submit)="onUpdateContact(contactForm)">
     <mat-form-field>
       <input
         matInput
         type="text"
         name="firstName"
         placeholder="First Name"
-        [ngModel]="contact?.firstName"
+        ngModel
         required
         #fsName="ngModel"
       />
@@ -20,7 +20,7 @@
         type="text"
         name="lastName"
         placeholder="Last Name"
-        [ngModel] = "contact?.LastName"
+        ngModel
         required
         #lsName="ngModel"
       />
@@ -34,11 +34,11 @@
         type="email"
         name="email"
         placeholder="Email"
-        [ngModel] = "contact?.email"
+        ngModel
         required
         #email="ngModel"
       />
-      <mat-error *ngIf="email?.invalid">
+      <mat-error *ngIf="email.invalid">
         <strong>Please enter a valid E-Mail</strong>
       </mat-error>
     </mat-form-field>
@@ -48,12 +48,12 @@
         type="tel"
         name="telephone"
         placeholder="phoneNumber"
-        [ngModel]="contact?.telephone"
+        ngModel
         required
       />
     </mat-form-field>
     <button mat-raised-button color="accent" type="submit">
-      Save Contact
+      Update Contact
     </button>
   </form>
 </mat-card>

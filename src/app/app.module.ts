@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularMaterialModule } from './angular-material.module';
 import { HeaderComponent } from './header/header/header.component';
 import { UserCreateComponent } from './users/user-create/user-create.component';
+import { UpdateContactComponent } from './users/update-contact/update-contact.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UserCreateComponent } from './users/user-create/user-create.component';
     DetailsComponent,
     HeaderComponent,
     UserCreateComponent,
+    UpdateContactComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,16 +2,18 @@
                [hideToggle]="false"
                *ngIf="users.length > 0">
     <mat-expansion-panel [hideToggle]="false" *ngFor="let user of users">
-        <mat-expansion-panel-header >{{user.firstName}}</mat-expansion-panel-header>
+        <mat-expansion-panel-header > {{user.firstName}}</mat-expansion-panel-header>
           <ul>
             <li><span class="title">Last Name:</span>{{ user.LastName}}</li>
             <li><span class="title">Email:</span>{{user.email}}</li>
             <li><span class="title">Telephone:</span>{{user.telephone}}</li>
           </ul>
         <mat-action-row>
-            <button mat-button >Action1</button>
+            <a mat-button color="accent" [routerLink]="['/edit', user.id]"><mat-icon>launch</mat-icon>EDIT</a>
+            <button mat-button color="warn" (click)="onDelete(user.id)"><mat-icon>delete-forever</mat-icon>DELETE</button>
         </mat-action-row>
     </mat-expansion-panel>
 </mat-accordion>
-<p
-<!-- <p class="mat-body-1" *ngIf="users.length <= 0">No Contact added yet</p> -->
+<p class="mat-body-1" *ngIf="users.length <= 0">No Contact added yet</p>
+
+
